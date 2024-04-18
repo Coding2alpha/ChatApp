@@ -4,8 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <HelmetProvider>
-    <App />
-  </HelmetProvider>,
-)
+    <div onContextMenu={(e)=>e.preventDefault()}>
+      <App />
+    </div>
+  </HelmetProvider>
+);

@@ -1,8 +1,6 @@
-import AppLayout from "../components/layout/AppLayout"
+import AppLayout from "../components/layout/AppLayout";
 
 const Chat = () => {
-  return (
-    <div>Chat</div>
-  )
-}
-export default AppLayout()(Chat)
+  return <div>Chat</div>;
+};
+export default AppLayout()(Chat);
