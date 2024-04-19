@@ -3,6 +3,7 @@ import ChatList from "../ChatList.jsx";
 import { sampleChats } from "../constants/sampleData.js";
 import Title from "../shared/Title.jsx";
 import Header from "./Header.jsx";
+import Profile from "../Profile.jsx";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -30,7 +31,7 @@ const AppLayout = () => (WrappedComponent) => {
           <div className="bg-slate-300 md:col-span-2 sm:col-span-3 col-span-4">
             <WrappedComponent {...props} />
           </div>
-          <div className="bg-red-300 hidden md:block">Last</div>
+          <div className="hidden md:block"><Profile/></div>
         </div>
       </>
     );
