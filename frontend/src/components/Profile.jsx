@@ -6,7 +6,7 @@ import moment from 'moment'
 
 const Profile = () => {
   return (
-    <div className="flex-col items-center justify-center space-y-4 w-full mt-2">
+    <div className="flex-col items-center justify-center space-y-4 w-full mt-4">
       <div className="w-full flex justify-center ">
         <FaRegUser className="h-[150px] w-[150px] border-black border-2 rounded-full bg-slate-200" />
       </div>

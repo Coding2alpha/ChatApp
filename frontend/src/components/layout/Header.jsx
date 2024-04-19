@@ -5,11 +5,10 @@ import { FaUserGroup } from "react-icons/fa6";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
-import {useNavigate} from 'react-router-dom'
-const SearchDialog = lazy(()=> import ("../SearchDialog"))
-const NotificationDialog= lazy (()=> import("../NotificationDialog"))
+import { useNavigate } from "react-router-dom";
+const SearchDialog = lazy(() => import("../SearchDialog"));
+const NotificationDialog = lazy(() => import("../NotificationDialog"));
 const NewGroup = lazy(() => import("../NewGroup"));
-
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,7 +16,7 @@ const Header = () => {
   const [isNotification, SetIsNotification] = useState(false);
   const [isNewGroup, setIsNewGroup] = useState(false);
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleMobile = () => {
     setIsMobile((prev) => !prev);
@@ -36,12 +35,14 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    console.log('logout');
+    console.log("logout");
   };
 
   return (
     <div>
-      <div className="flex justify-between items-center shadow-xl bg-gradient-to-r from-cyan-300 to-blue-300 min-h-[40px]">
+      <div
+        className={`flex justify-between items-center shadow-xl bg-gradient-to-r from-cyan-300 to-blue-300 min-h-[40px]`}
+      >
         <div className="sm:block hidden">Chat App</div>
         <div className="block sm:hidden">
           <IoIosMenu />
