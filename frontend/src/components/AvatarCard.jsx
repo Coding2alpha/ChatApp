@@ -1,8 +1,10 @@
-const AvatarCard = ({avatar}) => {
+import { transFormImage } from "../lib/features";
+
+const AvatarCard = ({ avatar }) => {
   return (
     <div className="w-[50px] h-[50px] ">
-      <img src={avatar[0]} className="rounded-full" />
+      <img src={transFormImage(avatar[0])} className="rounded-full" />
     </div>
   );
-}
-export default AvatarCard
+};
+export default AvatarCard;

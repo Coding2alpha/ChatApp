@@ -21,7 +21,7 @@ const AppLayout = () => (WrappedComponent) => {
         <Title />
         <Header />
         <div className="grid grid-cols-4  h-[92vh] relative">
-          <div className="hidden sm:block">
+          <div className="hidden sm:block overflow-auto">
             <ChatList
               chats={sampleChats}
               chatId={chatId}

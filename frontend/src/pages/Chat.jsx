@@ -2,16 +2,23 @@ import AppLayout from "../components/layout/AppLayout";
 import { ImAttachment } from "react-icons/im";
 import { IoMdSend } from "react-icons/io";
 import FileMenu from "../components/dialog/FileMenu";
+import { sampleMessage } from "../components/constants/sampleData";
+import MessageComponent from "../components/MessageComponent";
+
+const user = {
+  id: "1",
+  name: "Om Singh Thakur",
+};
 
 const Chat = () => {
-  
   return (
-    <div className="h-[100%]">
+    <div className="h-[92vh]">
       <div className="h-[90%] overflow-x-hidden overflow-y-auto">
-        Chat
-        {/* {messages} */}
+        {sampleMessage.map((message) => (
+          <MessageComponent key={message.chat} message={message} user={user} />
+        ))}
       </div>
-      <div className="h-[10%] flex gap-2 p-1 relative">
+      <div className="h-[10%] flex gap-2 p-1 relative pb-2">
         <div className="bg-white shadow-xl rounded-lg w-full flex gap-1">
           <button>
             <ImAttachment className="flex justify-center items-center text-xl ml-1  h-full text-gray-600" />
@@ -30,7 +37,6 @@ const Chat = () => {
             <IoMdSend className="hover:text-black   " />
           </button>
         </div>
-        // not complete
         {/* <FileMenu /> */}
       </div>
     </div>
