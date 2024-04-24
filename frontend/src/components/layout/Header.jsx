@@ -74,7 +74,7 @@ const Header = () => {
               <div className="bg-gray-300 h-6 rounded-full animate-pulse w-1/2 mx-2"></div>
             }
           >
-            <SearchDialog />
+            <SearchDialog closeHandler={openSearch} isOpen={isSearch} />
           </Suspense>
         </div>
       )}
@@ -85,7 +85,10 @@ const Header = () => {
               <div className="bg-gray-300 h-6 rounded-full animate-pulse w-1/2 mx-2"></div>
             }
           >
-            <NotificationDialog />
+            <NotificationDialog
+              closeHandler={openNotification}
+              isOpen={isNotification}
+            />
           </Suspense>
         </div>
       )}
@@ -96,7 +99,7 @@ const Header = () => {
               <div className="bg-gray-300 h-6 rounded-full animate-pulse w-1/2 mx-2"></div>
             }
           >
-            <NewGroup />
+            <NewGroup closeHandler={openNewGroup} isOpen={isNewGroup} />
           </Suspense>
         </div>
       )}
