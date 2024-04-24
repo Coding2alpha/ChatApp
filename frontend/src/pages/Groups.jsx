@@ -34,7 +34,9 @@ const Groups = () => {
     setUpdatedGroupName(() => e.target.value);
   };
 
-  const removeMemberHandler = (id) => {console.log('Remove member',id);}
+  const removeMemberHandler = (id) => {
+    console.log("Remove member", id);
+  };
 
   useEffect(() => {
     if (chatId) {
@@ -111,7 +113,14 @@ const Groups = () => {
             <div className="flex-col p-2 justify-center bg-white shadow-xl z-5 max-w-[80%] h-[60%] m-auto overflow-y-scroll">
               {sampleUsers.map((user, index) => {
                 user.isAdded = true;
-                return <UserItem key={index} user={user} style={true} handler={removeMemberHandler}/>;
+                return (
+                  <UserItem
+                    key={index}
+                    user={user}
+                    style={true}
+                    handler={removeMemberHandler}
+                  />
+                );
               })}
             </div>
             <div className=" sm:flex-row-reverse md:flex justify-center space-y-2 mt-4">
@@ -140,7 +149,9 @@ const Groups = () => {
             </div>
           </>
         ) : (
-          <p className="flex w-full h-full justify-center items-center text-2xl font-bold text-gray-500">Please Select Group To Edit</p>
+          <p className="flex w-full h-full justify-center items-center text-2xl font-bold text-gray-500">
+            Please Select Group To Edit
+          </p>
         )}
         <Drawer isOpen={isOpen} setIsOpen={setIsOpen} chatId={chatId} />
 
