@@ -1,9 +1,5 @@
-import { memo, useState } from "react";
-import { GoSearch } from "react-icons/go";
-import UserItem from "./UserItem";
-import { sampleNotifications, sampleUsers } from "./constants/sampleData";
-import { IoIosAdd } from "react-icons/io";
-import { useRef, useEffect } from "react";
+import { memo, useEffect, useRef } from "react";
+import { sampleNotifications } from "./constants/sampleData";
 
 const NotificationDialog = ({ isOpen, closeHandler }) => {
   const notifications = sampleNotifications;
