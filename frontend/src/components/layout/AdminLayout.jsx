@@ -20,11 +20,6 @@ const adminTabs = [
     icon: <MdGroups2 />,
     path: "/admin/chats-management",
   },
-  {
-    name: "Messages",
-    icon: <MdMessage />,
-    path: "/admin/messages-management",
-  },
 ];
 
 const SideBar = () => {
@@ -75,15 +70,15 @@ const AdminLayout = ({ children }) => {
   }
 
   return (
-    <div className=" grid grid-cols-3 min-h-[100vh] relative ">
+    <div className=" grid grid-cols-4 min-h-[100vh] relative ">
       <IoIosMenu
-        className="absolute top-3 right-3 text-2xl md:hidden block"
+        className="absolute top-3 right-3 text-2xl md:hidden block z-10"
         onClick={handleMobile}
       />
       <div className="md:block hidden">
         <SideBar />
       </div>
-      <div className=" md:col-span-2 col-span-3 bg-slate-200">{children}</div>
+      <div className=" md:col-span-3 col-span-4 bg-slate-200">{children}</div>
       {isMobile && (
         <Drawer isOpen={isMobile} setIsOpen={setIsMobile}>
           <SideBar />
